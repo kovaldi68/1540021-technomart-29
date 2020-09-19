@@ -1,11 +1,29 @@
 :root {
-    
-
-
---blue-top-bottom: #293449; 
---main-blue: #32425C;
---main-red: #EE3643;
+--blue-header-footer: #293449; 
+--blue-main: #32425C;
+--red-main: #EE3643;
+--red-error: #BA2732;
+--red-hover: #CA2C37;
 --white: #FFFFFF;
 --black: #000000;
---icon-grey: #B7BFC8;
+--grey-hover: #A9A9A9;
+--grey-popular-container: #F9F5F0;
+--grey-main: #F1F5F7;
+--yellow-nav: #FFD180;
+--orange-materials-special: #FFBF47;
+--blue-instruments-special: #3BBCE3;
+--lilac-technic-special: #DC91D8;
+--green-discount-special: #8ED78F;
+--peach-delivery-special: #FFC047;
+--green-order: #63A63E;
+--grey-breadcrumb: #C1C6CE;
+--grey-head: #F2F6F8;
+--grey-filter: #F7F3EC;
+--grey-hover: #C5C5C5;
+--grey-border: #E5E5E5;
+--green-success: #5FBB2D;
+--blue-click-dark: #161D29;
+--blue-click: #1D2739;
+--green-click: #518534;
+--grey-hover-blocked: #B5B5B5;
 }
