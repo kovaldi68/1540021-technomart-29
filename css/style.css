@@ -1,29 +1,597 @@
 :root {
---blue-header-footer: #293449; 
---blue-main: #32425C;
---red-main: #EE3643;
---red-error: #BA2732;
---red-hover: #CA2C37;
---white: #FFFFFF;
---black: #000000;
---grey-hover: #A9A9A9;
---grey-popular-container: #F9F5F0;
---grey-main: #F1F5F7;
---yellow-nav: #FFD180;
---orange-materials-special: #FFBF47;
---blue-instruments-special: #3BBCE3;
---lilac-technic-special: #DC91D8;
---green-discount-special: #8ED78F;
---peach-delivery-special: #FFC047;
---green-order: #63A63E;
---grey-breadcrumb: #C1C6CE;
---grey-head: #F2F6F8;
---grey-filter: #F7F3EC;
---grey-hover: #C5C5C5;
---grey-border: #E5E5E5;
---green-success: #5FBB2D;
---blue-click-dark: #161D29;
---blue-click: #1D2739;
---green-click: #518534;
---grey-hover-blocked: #B5B5B5;
+    --blue-header-footer: #293449; 
+    --blue-main: #32425C;
+    --red-main: #EE3643;
+    --red-error: #BA2732;
+    --red-hover: #CA2C37;
+    --basic-white: #FFFFFF;
+    --basic-black: #000000;
+    --grey-hover: #A9A9A9;
+    --grey-popular-container: #F9F5F0;
+    --grey-main: #F1F5F7;
+    --yellow-nav: #FFD180;
+    --orange-materials-special: #FFBF47;
+    --blue-instruments-special: #3BBCE3;
+    --lilac-technic-special: #DC91D8;
+    --green-discount-special: #8ED78F;
+    --peach-delivery-special: #FFC047;
+    --green-order: #63A63E;
+    --grey-breadcrumb: #C1C6CE;
+    --grey-head: #F2F6F8;
+    --grey-filter: #F7F3EC;
+    --grey-hover-light: #C5C5C5;
+    --grey-border: #E5E5E5;
+    --green-success: #5FBB2D;
+    --blue-click-dark: #161D29;
+    --blue-click: #1D2739;
+    --green-click: #518534;
+    --grey-hover-blocked: #B5B5B5;
+    --black-transparent: rgba(0, 0, 0, 0.0001);
+    --grey-light: #F3F7F9;
+    --white-advantages-opacity: rgba(250, 250, 250, 0.3);
+    --product-border: #EAEAEA;
+    --green-shadow: #367315;
+    --blue-shadow: #405069;
+}
+
+/* Global */
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    color: var(--basic-black);
+    font-weight: 400;
+}
+
+a {
+    text-decoration:none;    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* header */
+.header {
+    background: var(--grey-main);
+}
+
+.header-top-wrapper {
+    background-color: var(--blue-header-footer);
+    color:var(--basic-white);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.header-order-button {
+    background-color: var(--green-order);
+}
+
+.header-order-button:hover {
+    background-color: var(--green-success);
+}
+
+.header-top-wrapper a {
+    color: var(--basic-white);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header-top-wrapper a:focus {
+    color: var(--basic-white);
+    opacity: 0.5;
+}
+
+.header-middle-wrapper i {
+    color: var(--red-main);
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.header-contacts-phone-number {
+    background-color: var(--grey-light);
+    color: var(--red-main);
+    border: 3px solid var(--basic-white);
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.header-contacts p {
+    color: var(--blue-main);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.login-link,
+.registration-link {
+    background-color: var(--basic-white);
+    color: var(--basic-black); 
+    /* Почему если не определить это свойство, то цвет шрифта будет синий? Я вроде нигде ранее не переопределял синий, а в body стоит черный.*/
+    text-align: center;
+    vertical-align: middle;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 400;
+
+}
+
+.login-link:hover,
+.registration-link:hover {
+    color: var(--red-main);
+}
+
+.login-link:focus,
+.registration-link:focus {
+    color: var(--grey-hover-light);
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation a {
+    background-color: var(--blue-main);
+    color: var(--basic-white);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.site-navigation a:hover {
+    background-color: var(--blue-header-footer);
+    color: var(--basic-white);
+}
+
+.site-navigation a:focus {
+    background-color: var(--blue-click);
+    color: var(--basic-white);
+    opacity: 0.5;
+}
+
+/* main - advantages */
+
+.advantages-list h3{
+    color: var(--basic-white);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.advantage-materials {
+    background-color: var(--orange-materials-special);
+}
+
+.advantage-instrument {
+    background-color: var(--blue-instruments-special);
+}
+
+.advantage-technic {
+    background-color: var(--lilac-technic-special);
+}
+
+.advantage-discount {
+    background-color: var(--green-discount-special);
+}
+
+.advantage-delivery {
+    background-color: var(--peach-delivery-special);
+}
+
+.advantages-list a {
+    background-color: var(--white-advantages-opacity);
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.advantages-list a:hover {
+    background-color: var(--grey-hover-light);
+}
+
+.advantages-list a:focus {
+    background-color: var(--grey-hover);
+}
+
+figcaption {
+    color: var(--basic-white);
+}
+
+.slider figure {
+    background-color: var(--grey-hover);
+}
+
+figure h3 {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+figure p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.slider .slider-button-open-catalog {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--red-main);
+    border: none;
+}
+
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--red-main);
+}
+
+.button:hover {
+    background-color: var(--red-hover);
+}
+
+.button:focus {
+    background-color: var(--red-error);
+}
+
+/* popular goods */
+
+.popular-goods-head {
+    background-color: var(--grey-popular-container);
+}
+
+.popular-goods-head h2{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.popular-goods-head a{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.popular-goods-list {
+    list-style: none;
+}
+
+.product-card {
+    background-color: var(--basic-white);
+    border: 1px solid var(--product-border);
+}
+
+.product-card {
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+.product-link h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center; 
+}
+
+.old-price {
+    color: var(--grey-hover);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    text-decoration-line: line-through;
+    text-transform: uppercase; 
+}
+
+.hidden-price {
+    visibility: hidden;
+}
+
+.new-price {
+    background-color: var(--red-main);
+    color: var(--basic-white);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase; 
+}
+
+.product-buy {
+    background-color: var(--green-order);
+    color: var(--basic-white);
+    box-shadow: inset 0px -3px 0px var(--green-shadow);
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase; 
+}
+
+.product-buy:hover {
+    background-color: var(--green-success);
+}
+
+.product-buy:focus {
+    background-color: var(--green-click);
+}
+
+.product-bookmarks {
+    color: var(--blue-main);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    border: 3px solid var(--green-order);
+    border-radius: 2px;
+}
+
+.product-bookmarks:hover {
+    border: 3px solid var(--blue-main);
+}
+
+.product-bookmarks:focus {
+    border: 3px solid var(--grey-hover); 
+    /* Пока сделал этому элементу цвет A9A9A9, хотя в макете у него указан синий, как и при наведении(но никакого opacity или чего то такого нет). 
+    Но визуально он явно должен отличаться, да и выглядит на макете как серый.*/
+}
+
+/* popular-vendors */
+
+.popular-vendors-head {
+    background-color: var(--grey-popular-container);
+}
+
+.popular-vendors-head h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.popular-vendors-head a {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.popular-vendors-list {
+    list-style: none;
+}
+
+.popular-vendors-item {
+    background: var(--basic-white);
+    border: 1px solid var(--product-border);
+}
+
+/* services */
+
+.services {
+    background-color: var(--grey-main);
+}
+
+.services h2 {
+    color: var(--basic-black);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase; 
+}
+
+.services>p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.services-delivery-button,
+.services-guarantee-button,
+.services-credit-button{
+    background-color: var(--blue-main);
+    box-shadow: 0px 1px 0px var(--blue-header-footer), inset 0px 1px 0px var(--blue-shadow);
+    color: var(--basic-white);
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+} 
+
+.services-delivery-button:hover,
+.services-guarantee-button:hover,
+.services-credit-button:hover{
+    background-color: var(--blue-header-footer);
+}
+
+.services-delivery-button:focus,
+.services-guarantee-button:focus,
+.services-credit-button:focus{
+    background-color: var(--basic-white);
+    color: var(--blue-main);
+    box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+}
+
+.services-delivery h3,
+.services-guarantee h3,
+.services-credit h3{
+    color: var(--blue-main);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase; 
+}
+
+.services-delivery p,
+.services-guarantee p,
+.services-credit p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* about company */
+
+.about-company h2 {
+    color: var(--basic-black);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.about-company p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.partners-list li {
+    font-size: 18px;
+    line-height: 24px;
+    /* Необходимо будет еще добавить bullet в виде красных прямоугольников*/
+}
+
+.main-contacts h2 {
+    color: var(--basic-black);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase; 
+}
+
+.main-contacts p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--blue-main);
+    color: var(--basic-white);
+}
+
+.footer-navigation {
+    list-style: none;
+}
+
+.footer-navigation a {
+    color: var(--grey-main);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-navigation a:hover,
+.footer-advantages-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-navigation a:focus,
+.footer-advantages-list a:focus {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.footer-contacts p {
+    color: var(--grey-light);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-advantages-list {
+    list-style: none;
+}
+
+.footer-advantages-list a {
+    color: var(--yellow-nav);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-bottom-wrapper {
+    background-color: var(--blue-header-footer);
+}
+
+.footer-tehnomart-copyright {
+    color: var(--basic-white);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+/* social */
+
+.social-media {
+    list-style: none;
+}
+.social-button {
+    color: var(--basic-white);
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: var(--red-main);
+}
+
+/* feedback ~ copyright */
+
+.footer-bottom-wrapper p {
+    color: var(--basic-white);
+}
+
+.footer-feedback-mail {
+    color: var(--yellow-nav);
+}
+
+.footer-htmlacademy-copyright {
+    color: var(--yellow-nav);
+}
+
+.footer-feedback-mail:hover,
+.footer-htmlacademy-copyright:hover {
+    text-decoration: underline;
+}
+
+.footer-feedback-mail:focus,
+.footer-htmlacademy-copyright:focus {
+    color: var(--red-main);
+    text-decoration: none;
 }

@@ -5,8 +5,8 @@
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="header">
@@ -17,7 +17,7 @@
         </a>
         <div class="header-search">
           <h2>Форма поиска</h2>
-          <input type="search">
+          <input type="search" placeholder="Поиск">
           <!-- Здесь будет форма поиска -->
         </div>
         <a class="header-bookmarks" href="blank.html">Закладки</a>
@@ -60,54 +60,63 @@
         <h2>Достоинства</h2>
         <ul class="advantages-list">
           <li class="advantages-item">
-            <div>
+            <div class="advantage-materials">
               <h3>Материалы</h3>           
               <a class="button advantages-button" href="blank.html">На любой вкус</a> <!--Ссылка-->
             </div>
           </li>  
           <li class="advantages-item">
-            <div>
+            <div class="advantage-instrument">
               <h3>Инструмент</h3>
               <a class="button advantages-button" href="blank.html">На все случаи</a> <!--Ссылка-->
             </div>
           </li>
           <li class="advantages-item">
-            <div>
+            <div class="advantage-technic">
               <h3>Техника</h3>
               <a class="button advantages-button" href="blank.html">Для стройки</a> <!--Ссылка-->
             </div>
           </li>
           <li class="advantages-item">
-            <div>
+            <div class="advantage-discount">
               <h3>Скидки 50%</h3>
               <a class="button advantages-button" href="blank.html">На 350 товаров</a> <!--Ссылка-->
             </div>
           </li>
           <li class="advantages-item">
-            <div>
+            <div class="advantage-delivery">
               <h3>Доставка</h3>
               <a class="button advantages-button" href="blank.html">Бесплатно</a> <!--Ссылка-->
             </div>
           </li>
         </ul>
         <div class="slider">
-          <figure class="slider-content">
+          <figure class="slider-pic-1">
             <figcaption>
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
             </figcaption>
             <img src="img/" width="620" height="266" alt="Рабочий с перфоратором">
+          </figure>
+          <figure class="slider-pic-2">
+            <figcaption>
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+            </figcaption>
+            <img src="img/" width="620" height="266" alt="Рабочий с дрелью">
           </figure>    
-            <button class="slider-button slider-button-back" type="button">Назад</button>
-            <button class="slider-button slider-button-back" type="button">Вперед</button>
-            <button class="slider-button slider-button-open-catalog" type="button">Открыть каталог</button> <!--Ссылка поведёт на catalog.html-->
-            <button class="slider-button slider-button-slide-1" type="button">Слайд 1</button>
-            <button class="slider-button slider-button-slide-2" type="button">Слайд 2</button>
+          <button class="slider-button slider-button-back" type="button">Назад</button>
+          <button class="slider-button slider-button-back" type="button">Вперед</button>
+          <button class="slider-button slider-button-open-catalog" type="button">Открыть каталог</button> <!--Ссылка поведёт на catalog.html-->
+          <button class="slider-button slider-button-slide-1" type="button">Слайд 1</button>
+          <button class="slider-button slider-button-slide-2" type="button">Слайд 2</button>
         </div>
       </section>
       <section class="popular-goods">
-        <h2>Популярные товары</h2>
-        <a class="button popular-goods-open-button" href="blank.html">Все популярные товары</a>
+        <div class="popular-goods-head">  
+          <h2>Популярные товары</h2>
+          <a class="button popular-goods-open-button" href="blank.html">Все популярные товары</a>
+        </div>
         <ul class="popular-goods-list">
           <li class="popular-goods-item">
             <div class="product-card">
@@ -199,8 +208,10 @@
         </ul>
       </section>
       <section class="popular-vendors">
-        <h2>Популярные производители</h2>
-        <a class="button popular-vendors-open-button" href="blank.html">Все производители</a>
+        <div class="popular-vendors-head">
+          <h2>Популярные производители</h2>
+          <a class="button popular-vendors-open-button" href="blank.html">Все производители</a>
+        </div>
         <ul class="popular-vendors-list">
           <li class="popular-vendors-item">
             <a class="vendors-information" href="blank.html">
@@ -254,7 +265,7 @@
         <button class="services-guarantee-button" type="button">Гарантия</button>
         <button class="services-credit-button" type="button">Кредит</button>
         <figure class="services-slide">  
-          <figcaption>
+          <figcaption class="services-delivery">
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
@@ -266,7 +277,7 @@
           <img src="img/" width="468" height="261" alt="Декоративное изображение"> <!--Скорее всего будет background-image-->
         </figure>
         <figure class="services-slide">
-          <figcaption>
+          <figcaption class="services-guarantee">
             <h3>Гарантия</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
@@ -278,7 +289,7 @@
           <img src="img/" width="468" height="261" alt="Декоративное изображение"> <!--Скорее всего будет background-image-->
         </figure>
         <figure class="services-slide">
-          <figcaption>
+          <figcaption class="services-credit">
             <h3>Кредит</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
@@ -355,10 +366,10 @@
         </section>
         <section class="footer-social">
           <h2>Социальные сети</h2>
-          <ul>
-            <li><a class="social-button" href="#">ВКонтакте</a></li>
-            <li><a class="social-button" href="#">Фейсбук</a></li>
-            <li><a class="social-button" href="#">Инстаграмм</a></li>
+          <ul class="social-media">
+            <li><a class="social-button" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
+            <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
           </ul>
         </section>
         <p>
@@ -385,7 +396,6 @@
       <button type="button">Закрыть</button>
     </div>
     
-    <!-- Если я правильно понял, то формы логина и регистрации мне не нужны, у меня только 2 модальных окна будут с обратной связью и картой-->
     
     <div class="modal modal-feedback">
       <h2>Форма обратной связи</h2>
