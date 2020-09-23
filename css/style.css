@@ -32,6 +32,7 @@
     --product-border: #EAEAEA;
     --green-shadow: #367315;
     --blue-shadow: #405069;
+    --black-shadow: rgba(0, 0, 0, 0.24);
 }
 
 /* Global */
@@ -57,6 +58,11 @@ img {
 /* header */
 .header {
     background: var(--grey-main);
+}
+
+.header-logo {
+    background-color: var(--red-main);
+    box-shadow: inset 0px -5px 0px var(--black-shadow);
 }
 
 .header-top-wrapper {
@@ -357,9 +363,8 @@ figure p {
 }
 
 .product-bookmarks:focus {
-    border: 3px solid var(--grey-hover); 
-    /* Пока сделал этому элементу цвет A9A9A9, хотя в макете у него указан синий, как и при наведении(но никакого opacity или чего то такого нет). 
-    Но визуально он явно должен отличаться, да и выглядит на макете как серый.*/
+    border: 3px solid var(--blue-main);
+    opacity: 0.5;
 }
 
 /* popular-vendors */
@@ -528,7 +533,8 @@ figure p {
     text-decoration: none;
 }
 
-.footer-contacts p {
+.footer-contacts p,
+.footer-contacts-phone-number {
     color: var(--grey-light);
     font-size: 18px;
     line-height: 24px;
@@ -594,4 +600,86 @@ figure p {
 .footer-htmlacademy-copyright:focus {
     color: var(--red-main);
     text-decoration: none;
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+
+.breadcrumbs a {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.page-catalog-title {
+    color: var(--blue-main);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: var(--grey-head);
+}
+
+.page-catalog-filters {
+    background-color: var(--grey-filter);
+}
+
+.page-catalog-sort {
+    background-color: var(--grey-filter);
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    border: 1px solid var(--grey-border);
+    border-radius: 2px;
+}
+
+.pagination-item-current {
+    background-color: var(--red-main);
+}
+
+.pagination-item:hover {
+    border: 1px solid var(--grey-hover-light);
+}
+
+.pagination-item:focus {
+    border: 1px solid var(--red-main);
+    /* Почему у ховер и фокус одинаковый синтаксис, но работают они по разному, ховер - нормально задает серую границу, а фокус на границу не работает - делает красным при клике саму ссылку?*/
+}
+
+.about-catalog-items {
+    color: var(--basic-black);
+    background-color: var(--grey-main);
+}
+
+.about-catalog-items h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.about-catalog-items p {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
 }
