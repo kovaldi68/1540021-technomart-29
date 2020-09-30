@@ -47,7 +47,7 @@ body {
 }
 
 a {
-    text-decoration:none;    
+    text-decoration: none;    
 }
 
 img {
@@ -67,7 +67,7 @@ img {
 }
 
 .user-block .user-authorized {
-    display:none;
+    display: none;
 }
 
 .user-block--auth .user-authorized {
@@ -87,7 +87,7 @@ img {
 }
 
 .header-logo {
-    width:220px;
+    width: 220px;
     height: 47px;
     background-color: var(--red-main);
     box-shadow: inset 0px -5px 0px var(--black-shadow);
@@ -95,7 +95,7 @@ img {
 
 .header-top-wrapper {
     background-color: var(--blue-header-footer);
-    color:var(--basic-white);
+    color: var(--basic-white);
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -110,12 +110,12 @@ img {
 }
 
 .header-top-wrapper .container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
 .header-middle-wrapper .container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -133,7 +133,7 @@ img {
     vertical-align: middle;
 }
 
-.header-top-wrapper a:focus {
+.header-top-wrapper a:active {
     color: var(--basic-white);
     opacity: 0.5;
 }
@@ -167,16 +167,15 @@ img {
 }
 
 .login-link,
-.registration-link {
+.registration-link,
+.user-name {
     background-color: var(--basic-white);
     color: var(--basic-black); 
-    /* Почему если не определить это свойство, то цвет шрифта будет синий? Я вроде нигде ранее не переопределял синий, а в body стоит черный.*/
     text-align: center;
     vertical-align: middle;
     font-size: 21px;
     line-height: 21px;
     font-weight: 400;
-
 }
 
 .login-link:hover,
@@ -184,11 +183,18 @@ img {
     color: var(--red-main);
 }
 
-.login-link:focus,
-.registration-link:focus {
+.login-link:active,
+.registration-link:active,
+.user-name:active  {
     color: var(--grey-hover-light);
 }
 
+.unlogin-link {
+    color: var(--blue-main);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
 .site-navigation {
     list-style: none;
     padding: 0;
@@ -212,7 +218,7 @@ img {
     color: var(--basic-white);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
     background-color: var(--blue-click);
     color: var(--basic-white);
     opacity: 0.5;
@@ -328,7 +334,7 @@ img {
     background-color: var(--grey-hover-light);
 }
 
-.advantages-list a:focus {
+.advantages-list a:active {
     background-color: var(--grey-hover);
 }
 
@@ -378,7 +384,7 @@ figure p {
     background-color: var(--red-hover);
 }
 
-.button:focus {
+.button:active {
     background-color: var(--red-error);
 }
 
@@ -398,14 +404,14 @@ figure p {
     grid-row: 1/2;
 }
 
-.popular-goods-head h2{
+.popular-goods-head h2 {
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.popular-goods-head a{
+.popular-goods-head a {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
@@ -497,7 +503,7 @@ figure p {
     background-color: var(--green-success);
 }
 
-.product-buy:focus {
+.product-buy:active {
     background-color: var(--green-click);
 }
 
@@ -516,7 +522,7 @@ figure p {
     border: 3px solid var(--blue-main);
 }
 
-.product-bookmarks:focus {
+.product-bookmarks:active {
     border: 3px solid var(--blue-main);
     opacity: 0.5;
 }
@@ -537,7 +543,6 @@ figure p {
 
     outline: 3px solid red;
     outline-offset: -3px;
-    /* Не понимаю только почему кнопка уехала вниз */
 }
 
 .popular-vendors-head h2 {
@@ -579,7 +584,7 @@ figure p {
 
 .services {
     background-color: var(--grey-main);
-    padding-top:70px;
+    padding-top: 70px;
     padding-bottom: 70px;
 }
 
@@ -647,9 +652,9 @@ figure p {
     background-color: var(--blue-header-footer);
 }
 
-.services-delivery-button:focus,
-.services-guarantee-button:focus,
-.services-credit-button:focus{
+.services-delivery-button:active,
+.services-guarantee-button:active,
+.services-credit-button:active{
     background-color: var(--basic-white);
     color: var(--blue-main);
     box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
@@ -684,7 +689,7 @@ figure p {
 .index-columns {
     padding-top: 70px;
     padding-bottom: 70px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
 
     
@@ -759,7 +764,6 @@ figure p {
 .footer {
     background-color: var(--blue-main);
     color: var(--basic-white);
-    margin-top: 70px;
     width: 100%;
 }
 
@@ -779,8 +783,8 @@ figure p {
     text-decoration: underline;
 }
 
-.footer-navigation a:focus,
-.footer-advantages-list a:focus {
+.footer-navigation a:active,
+.footer-advantages-list a:active {
     opacity: 0.5;
     text-decoration: none;
 }
@@ -813,7 +817,8 @@ figure p {
     background-color: var(--blue-header-footer);
     padding-bottom: 30px;
     padding-top: 35px;
-    width:100%;
+    margin-bottom: 70px;
+    width: 100%;
 }
 
 .footer-tehnomart-copyright {
@@ -835,7 +840,7 @@ figure p {
 }
 
 .social-button:hover,
-.social-button:focus {
+.social-button:active {
     background-color: var(--red-main);
 }
 
@@ -858,8 +863,8 @@ figure p {
     text-decoration: underline;
 }
 
-.footer-feedback-mail:focus,
-.footer-htmlacademy-copyright:focus {
+.footer-feedback-mail:active,
+.footer-htmlacademy-copyright:active {
     color: var(--red-main);
     text-decoration: none;
 }
@@ -931,8 +936,21 @@ figure p {
 
 /* catalog */
 
+.page-catalog {
+    display: grid;
+    margin-bottom: 59px;
+    margin-top: 21px;
+}
+
 .breadcrumbs {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-column: 1/-1;
+    margin-bottom: 20px;
+
+    outline: 3px solid red;
+    outline-offset: -3px;
 }
 
 .breadcrumbs a {
@@ -944,6 +962,12 @@ figure p {
     text-transform: uppercase;
 }
 
+.catalog {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
 .page-catalog-title {
     color: var(--blue-main);
     font-size: 30px;
@@ -951,22 +975,39 @@ figure p {
     font-weight: 400;
     text-transform: uppercase;
     background-color: var(--grey-head);
+    margin: 0;
+    margin-bottom: 20px;
+    grid-column: 1/-1;
+
+    outline: 3px solid red;
+    outline-offset: -3px;
 }
 
 .page-catalog-filters {
     background-color: var(--grey-filter);
+    grid-area: 2/1/5/2;
 }
 
 .page-catalog-sort {
     background-color: var(--grey-filter);
+    grid-column: 2/-1;
 }
 
 .catalog-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-area: 3/2/6/-1;
+    margin-top: 28px;
+    margin-bottom: 48px;
 }
 
 .pagination-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-row-start: 6;
+    grid-column-start: 2;
 }
 
 .pagination-item {
@@ -989,9 +1030,8 @@ figure p {
     border: 1px solid var(--grey-hover-light);
 }
 
-.pagination-item:focus {
+.pagination-item:active {
     border: 1px solid var(--red-main);
-    /* Почему у ховер и фокус одинаковый синтаксис, но работают они по разному, ховер - нормально задает серую границу, а фокус на границу не работает - делает красным при клике саму ссылку?*/
 }
 
 .about-catalog-items {
