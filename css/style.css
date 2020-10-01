@@ -985,7 +985,9 @@ figure p {
 
 .page-catalog-filters {
     background-color: var(--grey-filter);
-    grid-area: 2/1/5/2;
+    height: 720px;
+    grid-row: 2/4; /* Не пойму почему не работает 2/-1. Ломается сетка */
+    grid-column: 1/2;
 }
 
 .page-catalog-sort {
@@ -1000,6 +1002,10 @@ figure p {
     grid-area: 3/2/6/-1;
     margin-top: 28px;
     margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    column-gap: 20px;
+    row-gap: 20px; 
 }
 
 .pagination-list {
