@@ -231,33 +231,10 @@ img {
     margin-bottom: 59px;
 }
 
-.advantages-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-
 .advantages-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.slider {
-    grid-column: 1/3;
-    grid-row: 2/4;
-    min-height: 266px;
-
-    outline: 3px solid red;
-    outline-offset: -3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .advantages-list h3{
@@ -269,11 +246,22 @@ img {
 
 .advantages-item {
     min-height: 123px;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 
     outline: 3px solid red;
     outline-offset: -3px;
 }
 
+.slider {
+    width: 620px;
+
+    outline: 3px solid red;
+    outline-offset: -3px;
+}
+
+/* 
 .advantages-item:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
@@ -297,26 +285,30 @@ img {
 .advantages-item:nth-child(5) {
     grid-column: 3;
     grid-row: 3;
-}
+} */
 
-.advantage-materials {
+.advantages-item:nth-child(1) {
     background-color: var(--orange-materials-special);
 }
 
-.advantage-instrument {
+.advantages-item:nth-child(2) {
     background-color: var(--blue-instruments-special);
 }
 
-.advantage-technic {
+.advantages-item:nth-child(3) {
     background-color: var(--lilac-technic-special);
+    margin-right: 0;
 }
 
-.advantage-discount {
+.advantages-item:nth-child(5) {
     background-color: var(--green-discount-special);
+    margin-right: 0;
+    height: 123px;
 }
 
-.advantage-delivery {
+.advantages-item:nth-child(6) {
     background-color: var(--peach-delivery-special);
+    margin-right: 0;
 }
 
 .advantages-list a {
@@ -392,16 +384,13 @@ figure p {
 
 .popular-goods {
     margin-bottom: 70px;
-    display: grid;
-    grid-template-columns: 220px 220px 220px 220px;
-    grid-template-rows: 89px 318px;
-    gap: 20px;
 }
 
 .popular-goods-head {
     background-color: var(--grey-popular-container);
-    grid-column: 1/-1;
-    grid-row: 1/2;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .popular-goods-head h2 {
@@ -422,16 +411,16 @@ figure p {
 .popular-goods-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 220px 220px 220px 220px;
-    grid-template-rows: 318px;
-    gap: 20px;   
+    margin: 0; 
+    display: flex;
+    justify-content: space-between;
 }
 
-.popular-goods-item:nth-child(1) {
+.popular-goods-item {
+    display: flex;
+}
+
+/* .popular-goods-item:nth-child(1) {
     grid-column: 1/2;
 }
 
@@ -445,12 +434,13 @@ figure p {
 
 .popular-goods-item:nth-child(4) {
     grid-column: 4/5;
-}
+} */
 
 .product-card {
     font-family: "PT Sans", Arial, sans-serif;
     background-color: var(--basic-white);
     border: 1px solid var(--product-border);
+    max-width: 220px;
 
     outline: 3px solid red;
     outline-offset: -3px;
@@ -531,18 +521,13 @@ figure p {
 
 .popular-vendors {
     margin-bottom: 70px;
-    display: grid;
-    grid-template-columns: 220px 220px 220px 220px;
-    grid-template-rows: 89px 145px 145px;
-    gap: 20px;
 }
 
 .popular-vendors-head {
     background-color: var(--grey-popular-container);
-    grid-column: 1/-1;
-
-    outline: 3px solid red;
-    outline-offset: -3px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .popular-vendors-head h2 {
@@ -564,20 +549,22 @@ figure p {
     list-style: none;
     padding: 0;
     margin: 0;
-    grid-column: 1/-1 ;
-    grid-row: 2/4;
-    display: grid;
-    grid-template-columns: 220px 220px 220px 220px;
-    grid-template-rows: 145px 145px;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .popular-vendors-item {
     background: var(--basic-white);
     border: 1px solid var(--product-border);
+    width: 220px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
 
-    outline: 3px solid red;
-    outline-offset: -3px;
+.popular-vendors-item:nth-child(4n) {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 /* services */
