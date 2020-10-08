@@ -1031,6 +1031,8 @@ figure p {
 .about-catalog-items {
     color: var(--basic-black);
     background-color: var(--grey-main);
+    padding-top: 64px;
+    padding-bottom: 68px;
 }
 
 .about-catalog-items h2 {
