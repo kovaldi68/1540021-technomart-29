@@ -1099,7 +1099,7 @@ img {
 
 .services {
     background-color: var(--grey-main);
-    padding-top: 62px;
+    padding-top: 63px;
 }
 
 .services-container {
@@ -1158,8 +1158,8 @@ img {
 .guarantee-slide::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 25px;
+    right: -87px;
     width: 468px;
     height: 261px;
     background-image: url("../img/guarantee.png");
@@ -1171,8 +1171,8 @@ img {
 .credit-slide::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 25px;
+    right: -14px;
     width: 468px;
     height: 261px;
     background-image: url("../img/credit.png");
@@ -1248,12 +1248,10 @@ img {
     outline: none;
 }
 
-.services-delivery h3,
-.services-guarantee h3,
-.services-credit h3{
+.services-delivery h3 {
     color: var(--blue-main);
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     width: 305px;
     font-size: 30px;
     line-height: 30px;
@@ -1261,8 +1259,54 @@ img {
     text-transform: uppercase;
 }
 
-.services-delivery p,
-.services-guarantee p,
+.services-guarantee h3 {
+    color: var(--blue-main);
+    margin: 0;
+    margin-bottom: 25px;
+    width: 305px;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.services-credit h3 {
+    color: var(--blue-main);
+    margin: 0;
+    margin-bottom: 28px;
+    width: 305px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.services-delivery p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    margin: 0;
+    margin-bottom: 25px;
+    width: 331px;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.services-guarantee p {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--basic-black);
+    margin: 0;
+    margin-bottom: 25px;
+    width: 331px;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
 .services-credit p {
     font-family: "PT Sans", Arial, sans-serif;
     color: var(--basic-black);
@@ -1284,10 +1328,10 @@ img {
     text-transform: uppercase;
     background-color: var(--red-credit-button);
     margin: 0;
-    margin-top: 27px;
+    margin-top: 25px;
     width: 195px;
     box-sizing: border-box;
-    padding: 13px 43px 13px 46px;
+    padding: 11px 43px 9px 46px;
     display: block;
     position: relative;
     border-radius: 3px;
