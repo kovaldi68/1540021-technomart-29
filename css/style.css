@@ -974,12 +974,13 @@ img {
 
 .product-card-image {
     margin: 0;
+    max-height: 181px;
 }
 
 .img-bosch-9000 {
     width: 184px;
     height: 164px;
-    margin: 6px 18px 8px 18px; 
+    margin: 6px 18px 8px 18px;
     position: relative; 
     z-index: -2;
 }
@@ -995,9 +996,53 @@ img {
 .img-bosch-6000 {
     width: 144px;
     height: 128px;
-    margin: 22px 43px 28px 33px;
+    margin: 20px 43px 28px 33px;
     position: relative; 
     z-index: -2;
+}
+
+.catalog-item:nth-child(3) img {
+    margin-bottom: 28px;
+}
+
+.catalog-item:nth-child(4) img {
+    margin-bottom: 36px;
+}
+
+.catalog-item:nth-child(4) h3 {
+    margin-left: 14px;
+}
+
+.catalog-item:nth-child(5) img {
+    margin-bottom: 28px;
+}
+
+.catalog-item:nth-child(6) img {
+    margin-bottom: 36px;
+}
+
+.catalog-item:nth-child(6) h3 {
+    margin-left: 14px;
+}
+
+.catalog-item:nth-child(7) img {
+    margin-bottom: 34px;
+}
+
+.catalog-item:nth-child(7) h3 {
+    margin-left: 14px;
+}
+
+.catalog-item:nth-child(8) img {
+    margin-bottom: 28px;
+}
+
+.catalog-item:nth-child(9) img {
+    margin-bottom: 34px;
+}
+
+.catalog-item:nth-child(9) h3 {
+    margin-left: 14px;
 }
 
 .new-item .product-card::before {
@@ -1021,6 +1066,15 @@ img {
     background-position: 0 0;
     transform: rotate(45deg);
     z-index: -1;
+    box-sizing: border-box;
+    margin-top: 3px;
+    padding-top: 4px;
+    padding-right: 8px;
+}
+
+.new-item:nth-child(4) .product-card::before {
+    margin-top: 4px;
+    margin-left: 1px;
 }
 
 .product-card {
@@ -1085,6 +1139,15 @@ img {
     background-position: 0 0;
     transform: rotate(45deg);
     z-index: 1;
+    box-sizing: border-box;
+    margin-top: 3px;
+    padding-top: 4px;
+    padding-right: 8px;
+}
+
+.new-item:nth-child(4) .product-card-active::before {
+    margin-top: 4px;
+    margin-left: 1px;
 }
 
 .product-link h3 {
@@ -1680,8 +1743,12 @@ img {
     line-height: 24px;
     font-weight: 400;
     margin: 0;
-    margin-left: 1px;
+    margin-left: 2px;
     margin-top: 22px;
+}
+
+.footer-contacts-phone-number {
+    margin-left: 1px;
 }
 
 .footer-advantages-list {
@@ -2311,7 +2378,7 @@ img {
     padding: 0;
     grid-area: 3/2/6/-1;
     margin-top: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
