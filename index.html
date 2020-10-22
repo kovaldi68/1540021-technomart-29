@@ -374,7 +374,9 @@
               Вы можете забрать товар сами,<br>
               заехав в наш офис:
             </p>
+            <a class="map-link" href="#">
               <img class="city-map" src="img/map.jpg" width="300" height="158" alt="Карта магазина по адресу Большая Конюшенная улица, дом 19">
+            </a>
             <a class="button feedback-button" href="blank.html">Заблудились? Напишите нам</a> <!--Нажатие на кнопку выведет окно с формой обратной связи-->
           </section>
         </div>
@@ -464,32 +466,46 @@
       </div>
     </footer>
 
-    <div class="">
+    <div class="modal modal-login">
       <h2>Войти</h2>
       <p>Введите ваш логин и пароль</p>
       <!--Форма входа в личный кабинет-->
       <button type="button">Закрыть</button>
     </div>
 
-    <div class="">
-      <h2>Регистрация</h2>
-      <!--Форма регистрации-->
+    <div class="modal modal-added-to-cart">
+      <h2>Добавление в корзину</h2>
       <button type="button">Закрыть</button>
     </div>
     
-    
     <div class="modal modal-feedback">
-      <h2>Форма обратной связи</h2>
-      <p class="modal-description">Пожалуйста, введите имя и номер телефона, и мы с Вами свяжемся</p>
-      <!--Форма  обратной связи-->
-      <button class="modal-close" type="button">Закрыть</button>
-      <button class="button modal-feedback-button" type="submit">Отправить</button>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="">
+        <div class="feedback-form-top">
+          <div>
+            <label class="" for="feed-name">Ваше имя:</label><br>
+            <input class="feedback-form-name" id="feed-name" name="user-name" type="text" placeholder="Имя Фамилия">
+          </div>
+          <div>
+            <label class="" for="feed-mail">Ваш e-mail:</label><br>
+            <input class="feedback-form-mail" id="feed-mail" name="user-mail" type="email" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="feedback-form-middle">
+          <label class="" for="feed-text">Текст письма:</label><br>
+          <textarea class="feedback-text" id="feed-text" name="user-text" rows="4" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="feedback-form-bottom">
+          <button class="button modal-feedback-button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-feedback-close" type="button" aria-label="Закрыть"></button>
     </div> 
 
     <div class="modal modal-map">
-      <h2>Как до нас добраться</h2>
-      <!-- Здесь будет карта -->
-      <button class="modal-close" type="button">Закрыть</button>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124086!2d30.320894616217934!3d59.93879686904775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1603329754134!5m2!1sru!2sru" width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0" title="Магазин по адресу Большая Конюшенная ул., дом 19, Санкт-Петербург"></iframe>
+      <button class="modal-map-close" type="button" aria-label="Закрыть"></button>
     </div>
 
   </body>
