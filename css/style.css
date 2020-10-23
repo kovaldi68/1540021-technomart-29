@@ -2454,6 +2454,7 @@ img {
     margin: auto;
     color: var(--basic-black);
     background-color: var(--grey-light);
+    display: none;
 }
 
 .modal h2 {
@@ -2469,7 +2470,6 @@ img {
     z-index: 15;
     top: 200px;
     bottom: auto;
-    display: none;
 }
 
 .modal-feedback::before {
@@ -2587,7 +2587,6 @@ img {
     z-index: 15;
     top: 200px;
     bottom: auto;
-    display: none;
 }
 
 .modal-map iframe {
@@ -2625,11 +2624,6 @@ img {
     background-image: url("../img/icon-close.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
-}
-
-
-.modal-add-to-cart {
-    display: none;
 }
 
 .modal-add-to-cart {
@@ -2733,4 +2727,3 @@ img {
     background-position: 0 0;
     background-repeat: no-repeat;
 }
-
