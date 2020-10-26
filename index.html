@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="header">
@@ -117,14 +117,14 @@
               </li>
             </ul>
             <div class="slider">
-              <figure class="slider-item current-slide">
+              <figure class="slider-item perf current-slide">
                 <figcaption>
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
                 </figcaption>
                 <img src="img/slide-1.jpg" width="620" height="266" alt="Рабочий с перфоратором">
               </figure>
-              <figure class="slider-item">
+              <figure class="slider-item drill">
                 <figcaption>
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
@@ -147,7 +147,7 @@
                 </button>
               </div>
               <div class="slider-controls-circle-button">
-                <button class="slider-button circle-button slider-button-slide-1 current" type="button" aria-label="Показать слайд 1 Перфораторы"></button>
+                <button class="slider-button circle-button slider-button-slide-1 current-circle-button" type="button" aria-label="Показать слайд 1 Перфораторы"></button>
                 <button class="slider-button circle-button slider-button-slide-2" type="button" aria-label="Показать Слайд 2 Дрели"></button>
               </div>
             </div>
@@ -307,7 +307,7 @@
             </p>
             <div class="services-container">
               <div class="services-controls">
-                <button class="service-button services-delivery-button current" aria-label="Показать слайд-доставка" type="button">Доставка</button>
+                <button class="service-button services-delivery-button current-button" aria-label="Показать слайд-доставка" type="button">Доставка</button>
                 <button class="service-button services-guarantee-button" aria-label="Показать слайд-гарантия" type="button">Гарантия</button>
                 <button class="service-button services-credit-button" aria-label="Показать слайд-кредит" type="button">Кредит</button>
               </div>
@@ -468,7 +468,7 @@
     
     <div class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="feedback-form" action="">
+      <form class="feedback-form" action="" method="post">
         <div class="feedback-form-top">
           <div>
             <label for="feed-name">Ваше имя:</label><br>
@@ -494,6 +494,18 @@
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124086!2d30.320894616217934!3d59.93879686904775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1603329754134!5m2!1sru!2sru" width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0" title="Магазин по адресу Большая Конюшенная ул., дом 19, Санкт-Петербург"></iframe>
       <button class="modal-map-close" type="button" aria-label="Закрыть"></button>
+    </div>
+
+    <div class="modal modal-add-to-cart">
+      <h2 class="visually-hidden">Добавление в корзину</h2>
+      <div class="modal-add-to-cart-top">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="modal-add-to-cart-bottom">
+        <a class="make-an-order" href="#">Оформить заказ</a>
+        <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+      </div>
+      <button class="modal-add-to-cart-close" type="button" aria-label="Закрыть"></button>
     </div>
 
     <script src="js/script.js"></script>
