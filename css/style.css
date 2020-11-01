@@ -130,7 +130,6 @@ img {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    width: 100%;
     min-height: 42px;
 }
 
@@ -157,73 +156,76 @@ img {
 
 .header-search {
     margin-left: 220px;
-    position: relative;
 }
 
-.header-search input {
+.search-form {
     background-color: var(--blue-header-footer);
     min-height: 42px;
+    padding: 0;
     border: 0;
     outline: 0;
     outline-offset: 0;
     width: 270px;
-}
-
-.header-search input {
+    padding: 9px 42px;
     background-image: url("../img/icon-search-no-hover.svg");
     background-repeat: no-repeat;
     background-position: 17px 12px;
     background-size: 17px 17px;
 }
 
-.header-search input:hover {
+.search-form:hover {
     background-image: url("../img/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 17px 12px;
     background-size: 17px 17px;
 }
 
-.header-search input:active,
-.header-search input:focus {
+.search-form:active,
+.search-form:focus {
     background-color: var(--basic-white);
     background-image: url("../img/icon-search-red.svg");
     background-repeat: no-repeat;
     background-position: 17px 12px;
     background-size: 17px 17px;
-    padding-left: 40px;
 }
 
-.header-search input::placeholder {
+.search-form::placeholder {
     color: var(--basic-white);
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 40px;
 }
 
-.header-search input:focus::placeholder,
-.header-search input:active::placeholder {
+.search-form:focus::placeholder,
+.search-form:active::placeholder {
     color: var(--basic-black);
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 0;
 }
 
-.header-search input:active::placeholder,
-.header-search input:focus::placeholder {
+.search-form:active::placeholder,
+.search-form:focus::placeholder {
     color: var(--basic-black);
+}
+
+.user-activities {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.activity-item a{
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .header-bookmarks {
     color: var(--basic-white);
     text-align: center;
     display: block;
-    padding: 9px 24px 9px 43px;
+    padding-right: 24px;
+    padding-left: 43px;
     position: relative;
     width: 150px;
     box-sizing: border-box;
@@ -261,7 +263,8 @@ img {
     color: var(--basic-white);
     text-align: center;
     display: block;
-    padding: 10px 23px 9px 47px;
+    padding-right: 23px;
+    padding-left: 47px;
     position: relative;
     width: 150px;
     box-sizing: border-box;
@@ -297,12 +300,13 @@ img {
 
 .not-empty-cart {
     background-color: var(--red-main);
-    padding: 9px 21px 9px 34px;
+    padding-right: 21px;
+    padding-left: 34px;
     width: 135px;
     margin-left: 15px;
 }
 
-.not-empty-cart.header-basket::before {
+.not-empty-cart::before {
     content: "";
     position: absolute;
     top: 13px;
@@ -318,6 +322,7 @@ img {
 .not-empty-cart:hover,
 .not-empty-cart:focus {
     background-color: var(--red-hover);
+
 }
 
 .not-empty-cart:active {
@@ -591,11 +596,28 @@ img {
     opacity: 0.5;
 }
 
+.button {
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--red-main);
+    padding: 0;
+}
+
+.button:hover {
+    background-color: var(--red-hover);
+}
+
+.button:active {
+    background-color: var(--red-error);
+}
+
 /* main - advantages */
 
 .advantages {
-    margin-top: 59px;
-    margin-bottom: 59px;
+    padding-top: 59px;
+    padding-bottom: 59px;
 }
 
 .advantages-grid {
@@ -612,16 +634,10 @@ img {
     grid-column: 1/-1;
     grid-row: 1/-1;
     display: grid;
+    align-items: flex-start;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     gap: 20px;
-}
-
-.slider {
-    grid-column: 1/3;
-    grid-row: 2/4;
-    min-height: 266px;
-    position: relative;
 }
 
 .advantages-list h3{
@@ -630,13 +646,14 @@ img {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-left: 22px;
+    margin-bottom: 14px;
 }
 
 .advantages-item {
     min-height: 123px;
     position: relative;
+    padding: 20px 143px 21px 22px;
+    box-sizing: border-box;
 }
 
 .advantages-item:nth-child(1) {
@@ -655,10 +672,10 @@ img {
     text-transform: uppercase;
     display: flex;
     position: absolute;
-    align-items: center;
     justify-content: center;
-    top: 10px;
-    left: 225px;
+    align-items: center;
+    top: 8px;
+    left: 227px;
     width: 100px;
     height: 30px;
     background-color: var(--red-main);
@@ -751,7 +768,15 @@ img {
     background-position: 0 0;
 }
 
-.advantages-list a {
+.advantages-item:nth-child(6) {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    min-height: 266px;
+    position: relative;
+    padding: 0;
+}
+
+.advantages-button {
     background-color: var(--white-advantages-opacity);
     color: var(--basic-white);
     font-size: 14px;
@@ -760,19 +785,17 @@ img {
     text-align: center;
     text-transform: uppercase;
     display: block;
-    margin-top: 14px;
-    margin-left: 22px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     width: 135px; 
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
 }
 
-.advantages-list a:hover,
-.advantages-list a:focus {
+.advantages-button:hover,
+.advantages-button:focus {
     background-color: var(--grey-advantages-hover-opacity);
 }
 
-.advantages-list a:active {
+.advantages-button:active {
     background-color: var(--grey-advantages-active-opacity);
 }
 
@@ -784,7 +807,7 @@ img {
 .slider .slider-item {
     background-color: var(--grey-hover);
     margin: 0;
-    height: 260px;
+    height: 266px;
 }
 
 .slider-item {
@@ -889,26 +912,10 @@ img {
     cursor: pointer;
 }
 
-.button {
-    text-align: center;
-    vertical-align: middle;
-    text-transform: uppercase;
-    color: var(--basic-white);
-    background-color: var(--red-main);
-}
-
-.button:hover {
-    background-color: var(--red-hover);
-}
-
-.button:active {
-    background-color: var(--red-error);
-}
-
 /* popular goods */
 
 .popular-goods {
-    margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 
 .popular-goods-head {
@@ -917,6 +924,7 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 25px 14px 26px 28px;
 }
 
 .popular-goods-head h2 {
@@ -925,9 +933,7 @@ img {
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: 29px;
-    margin-left: 28px;
-    margin-bottom: 30px;
+    margin-top: 5px;
 }
 
 .popular-goods-open-button {
@@ -938,9 +944,6 @@ img {
     text-transform: uppercase;
     width: 192px;
     padding: 11px 24px 9px;
-    margin-top: 25px;
-    margin-right: 14px; 
-    margin-bottom: 26px;
     box-sizing: border-box;
 }
 
@@ -1020,7 +1023,7 @@ img {
 }
 
 .catalog-item:nth-child(4) h3 {
-    margin-left: 14px;
+    margin-left: 13px;
 }
 
 .catalog-item:nth-child(5) img {
@@ -1082,9 +1085,18 @@ img {
     padding-right: 8px;
 }
 
+.new-item:nth-child(2) .product-card::before {
+    margin-top: 3px;
+    margin-left: 1px;
+}
+
 .new-item:nth-child(4) .product-card::before {
     margin-top: 4px;
-    margin-left: 1px;
+    margin-left: 2px;
+}
+
+.new-item:nth-child(4) img {
+    margin-left: 40px;
 }
 
 .product-card {
@@ -1165,8 +1177,8 @@ img {
 }
 
 .new-item:nth-child(4) .product-card-active::before {
-    margin-top: 4px;
-    margin-left: 1px;
+    margin-top: 3px;
+    margin-left: 3px;
 }
 
 .product-link h3 {
@@ -1188,7 +1200,6 @@ img {
     line-height: 18px;
     text-align: center;
     margin: 0;
-    margin-top: 7px;
     margin-bottom: 13px;
     text-decoration-line: line-through;
     text-transform: uppercase; 
@@ -1272,7 +1283,7 @@ img {
 /* popular-vendors */
 
 .popular-vendors {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .popular-vendors-head {
@@ -1281,6 +1292,7 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 23px 19px 26px 28px;
 }
 
 .popular-vendors-head h2 {
@@ -1289,9 +1301,7 @@ img {
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: 27px;
-    margin-left: 28px;
-    margin-bottom: 30px;
+    margin-top: 5px;
     
 }
 
@@ -1303,9 +1313,6 @@ img {
     text-transform: uppercase;
     width: 192px;
     padding: 11px 38px 9px 39px;
-    margin-top: 22px;
-    margin-right: 19px; 
-    margin-bottom: 26px;
     box-sizing: border-box;
 }
 
@@ -1623,11 +1630,14 @@ img {
     margin-bottom: 25px;
 }
 
+.about-company p:nth-child(3) {
+    margin-bottom: 3px;
+}
+
 .partners-list {
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
-    margin-top: 3px;
     list-style-type: none;
 }
 
@@ -1904,8 +1914,8 @@ img {
 
 .page-catalog {
     display: grid;
-    margin-bottom: 49px;
-    margin-top: 20px;
+    padding-bottom: 49px;
+    padding-top: 20px;
 }
 
 .breadcrumbs {
@@ -1913,7 +1923,7 @@ img {
     margin: 0;
     padding: 0;
     grid-column: 1/-1;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -2414,20 +2424,25 @@ img {
     line-height: 18px;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
     background-color: var(--basic-white);
     border: 1px solid var(--grey-border);
     border-radius: 2px;
     margin: 0;
     display: block;
-    padding: 10px 15px;
+    padding: 10px 5px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
 }
 
 .pagination-item:last-child {
     margin-right: 0;
-    padding: 10px 33px 10px 30px
+    padding: 10px 33px 10px 30px;
+    width: 140px;
 }
 
 .pagination-item-current {
@@ -2513,9 +2528,7 @@ img {
 }
 
 .feedback-form-top {
-    margin-top: 46px;
-    margin-left: 80px;
-    margin-right: 80px;
+    padding: 46px 80px 0px 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2526,20 +2539,21 @@ img {
 }
 
 .feedback-form-middle {
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 13px;
-    margin-bottom: 33px;
+    padding: 13px 80px 33px 80px;
 }
 
 .feedback-form-bottom {
     background-color: var(--grey-modal);
+    padding: 37px 80px 37px 80px;
 }
 
 .feedback-form label {
+    display: inline-block;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    margin-bottom: 11px;
+    margin-left: 1px;
 }
 
 .feedback-form-name, 
@@ -2552,15 +2566,15 @@ img {
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
-    padding: 7px 8px 3px 12px;
     border: 2px solid var(--grey-hover-light);
     border-radius: 2px;
-    margin-top: 11px;
+    padding: 4px 10px 6px 10px;
 }
 
 .feedback-text {
+    height: 114px;
     width: 460px;
-    padding: 6px 12px 8px 12px;
+    padding-top: 6px;
     resize: none;
 }
 
@@ -2572,7 +2586,6 @@ img {
     padding-top: 11px;
     padding-bottom: 9px;
     min-width: 460px;
-    margin: 37px 80px;
 }
 
 .modal-feedback-close {
@@ -2605,7 +2618,7 @@ img {
 .modal-map {
     width: 943px;
     height: 449px;
-    background-color: var(--basic-white);
+    background-color: var(--grey-main);
     box-shadow: 0px 4px 20px var(--black-box-shadow);
     z-index: 15;
     transform: translateY(-50%);
@@ -2696,6 +2709,7 @@ img {
     background-color: var(--grey-modal-cart);
     display: flex;
     flex-wrap: wrap;
+    padding: 37px 112px 37px 114px;
 }
 
 .modal-add-to-cart-bottom a {
@@ -2708,21 +2722,14 @@ img {
 .make-an-order {
     background-color: var(--red-main);
     color: var(--basic-white);
-    margin: 37px 10px 37px 114px;
-    padding-top: 11px;
-    padding-bottom: 9px;
-    padding-left: 47px;
-    padding-right: 46px;
+    margin-right: 9px;
+    padding: 11px 47px 9px 47px;
 }
 
 .continue-shopping {
     background-color: var(--basic-white);
     color: var(--basic-black);
-    margin: 37px 112px 37px 0px;
-    padding-top: 11px;
-    padding-bottom: 9px;
-    padding-left: 32px;
-    padding-right: 31px;
+    padding: 11px 31px 9px 32px;
 }
 
 
