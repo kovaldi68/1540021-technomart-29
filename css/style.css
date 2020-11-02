@@ -2175,6 +2175,11 @@ img {
     border: 2px solid var(--grey-hover-blocked);
 }
 
+.filter-input-checkbox:focus + label::before {
+    outline: auto;
+    outline-offset: 4px;
+}
+
 .filter-input-checkbox:disabled + label {
     opacity: 0.4;
     cursor: default;
@@ -2226,6 +2231,10 @@ img {
 
 .filter-input-radio:hover + label::before {
     border: 4px solid var(--grey-hover-blocked);
+}
+
+.filter-input-radio:focus + label::before {
+    box-shadow: 0 0 0 2px var(--basic-black);
 }
 
 .filter-input-radio:disabled + label {
@@ -2376,6 +2385,10 @@ img {
     transform: rotate(180deg);
 }
 
+.arrow-link:not(.active-sort):hover path {
+    fill: var(--basic-black);
+}
+
 .active-sort path {
     fill: var(--red-main);
 }
@@ -2418,12 +2431,6 @@ img {
 }
 
 .pagination-item {
-    font-family: "PT Sans", Arial, sans-serif;
-    color: var(--basic-black);
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
     text-align: center;
     background-color: var(--basic-white);
     border: 1px solid var(--grey-border);
@@ -2439,6 +2446,15 @@ img {
     box-sizing: border-box;
 }
 
+.pagination-item a {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
 .pagination-item:last-child {
     margin-right: 0;
     padding: 10px 33px 10px 30px;
@@ -2447,11 +2463,20 @@ img {
 
 .pagination-item-current {
     background-color: var(--red-main);
+    border: none;
+}
+
+.pagination-item-current a{
     color: var(--basic-white);
 }
 
 .pagination-item:hover {
     border: 1px solid var(--grey-hover-light);
+}
+
+.pagination-item-current:hover {
+    background-color: var(--red-main);
+    border: none;
 }
 
 .pagination-item:active {
